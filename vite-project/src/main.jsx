@@ -5,9 +5,8 @@ import App from './App';
 import { Auth0Provider } from "@auth0/auth0-react";
 
 // Ensure environment variables are correctly loaded
-const domain = process.env.REACT_APP_AUTH0_DOMAIN;
-const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
-
+const domain = import.meta.env.VITE_AUTH0_DOMAIN;
+const clientId = import.meta.env.VITE_AUTH0_CLIENT_ID;
 if (!domain || !clientId) {
   console.error('Auth0 domain or client ID is not defined. Please check your environment variables.');
 }
