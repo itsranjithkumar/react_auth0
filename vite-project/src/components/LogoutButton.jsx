@@ -6,9 +6,11 @@ import React from 'react'
 const LoginoutButton = () => {
     const { logout, isAuthenticated } = useAuth0();
   return (
-    !isAuthenticated && (
-        <button onClick={()=> loginWithRedirect()}>
-            sign Out
+    isAuthenticated && (
+        <button onClick={()=> logout()}>
+
+            Sign Out
+            
         </button>
     )
    
